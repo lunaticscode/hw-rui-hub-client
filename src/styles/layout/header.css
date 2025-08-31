@@ -1,0 +1,78 @@
+/* Header container */
+.header {
+  position: fixed;
+
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 32px;
+  background-color: #232323;
+  color: #fff;
+  border-bottom: 1px solid #4e54c834;
+  box-sizing: border-box;
+}
+
+/* Left section */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Logo */
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-nav-item {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.header-nav-item:hover {
+  background: #333;
+}
+
+/* Right section */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Profile button */
+.header-profile-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profile icon */
+.header-profile-icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4e54c8 0%, #8f94fb);
+}

@@ -1,0 +1,27 @@
+/* 메인 컨텐츠 영역 */
+.app-main-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  flex: 1;
+  margin-top: 64px; /* header 높이 */
+  /* padding: 32px 40px; */
+  background: #232323;
+  color: #fff;
+  height: calc(100vh - 64px);
+  transition: margin-left 0.3s;
+  box-sizing: border-box;
+  z-index: 100;
+}
+.app-main-content.with-sidebar {
+  margin-left: 200px; /* 사이드바 열렸을 때 너비 */
+  width: calc(100% - 200px);
+}
+/* 반응형 처리 (모바일) */
+@media (max-width: 768px) {
+  .app-main-content {
+    padding: 16px 8px;
+    margin-left: 0 !important;
+  }
+}

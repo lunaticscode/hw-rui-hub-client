@@ -1,0 +1,37 @@
+.foundation-page {
+  min-height: calc(100vh - 64px);
+  background: #232323;
+  color: #fff;
+  padding: 48px 30px;
+  box-sizing: border-box;
+}
+
+.foundation-page-header {
+  width: 100%;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.foundation-page-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.foundation-page-description {
+  font-size: 1.1rem;
+  color: #bdbdbd;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.foundation-page-content {
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  background: #232323;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 24px 0;
+}
