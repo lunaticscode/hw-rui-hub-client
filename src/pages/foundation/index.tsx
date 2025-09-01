@@ -5,7 +5,7 @@ const FoundationPage: React.FC = () => {
   return (
     <div className="foundation-page">
       <header className="foundation-page-header">
-        <h1 className="foundation-page-title">Foundation Overview</h1>
+        <h1 className="foundation-page-title">Foundation</h1>
         <p className="foundation-page-description">
           디자인 시스템의 핵심 원칙과 토대를 소개합니다. 일관된 사용자 경험을
           위해 색상, 타이포그래피, 아이콘 등 기본 요소들을 정의합니다.

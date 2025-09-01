@@ -49,7 +49,7 @@ const Sidebar: React.FC<SidebarProps> = ({ width = 200 }) => {
   const { currentPathname } = useSnapshot(locationSnapshot);
 
   const menus = getSidebarMenusFromPathname(currentPathname);
-  console.log({ menus });
+
   const isVisible = useMemo(
     () =>
       visibleSidebarPathnames.find((path) => currentPathname.startsWith(path)),
@@ -57,7 +57,6 @@ const Sidebar: React.FC<SidebarProps> = ({ width = 200 }) => {
   );
 
   if (!isVisible) {
-    console.log("close");
     closeSidebar();
     return null;
   }

@@ -1,4 +1,4 @@
-import { API_BASE_URL } from "@shared/config/const";
+import { API_BASE_URL } from "@shared/config/api";
 import { useEffect, useState } from "react";
 
 const useFetchGetApi = <T>(path: string, shouldFetch: boolean = true) => {
