@@ -1,12 +1,12 @@
 import { createRoot } from "react-dom/client";
-import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RootLayout from "./components/layout/RootLayout.tsx";
-import DashboardPage from "./pages/DashboardPage.tsx";
-import NotFoundPage from "./pages/NotFoundPage.tsx";
-import NotReadyPage from "./pages/NotReadyPage.tsx";
-import FoundationPage from "./pages/FoundationPage.tsx";
-import FoundationColorPage from "./pages/foundation/FoundationColorPage.tsx";
+import "./index.css";
+import RootLayout from "./widgets/app/ui/RootLayout.tsx";
+import NotReadyPage from "./pages/error/NotReadyPage.tsx";
+import FoundationColorPage from "./pages/foundation/color";
+import DashboardPage from "./pages/dashboard";
+import NotFoundPage from "./pages/not-found";
+import FoundationPage from "./pages/foundation";
 
 const router = createBrowserRouter([
   {

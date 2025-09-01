@@ -1,7 +1,7 @@
+import { API_BASE_URL } from "@shared/config/const";
 import { useEffect, useState } from "react";
-import { API_BASE_URL } from "../consts/api.const";
 
-export const useFetchGetApi = <T>(path: string) => {
+const useFetchGetApi = <T>(path: string, shouldFetch: boolean = true) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
   const [data, setData] = useState<T | null>(null);
@@ -27,8 +27,12 @@ export const useFetchGetApi = <T>(path: string) => {
   };
 
   useEffect(() => {
-    trigger();
-  }, []);
+    if (shouldFetch) {
+      trigger();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [shouldFetch]);
+
   return {
     data,
     trigger,
@@ -36,3 +40,5 @@ export const useFetchGetApi = <T>(path: string) => {
     error,
   };
 };
+
+export default useFetchGetApi;

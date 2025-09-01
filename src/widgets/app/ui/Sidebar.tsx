@@ -1,14 +1,14 @@
 import React, { useMemo } from "react";
 import { useSnapshot } from "valtio";
+import { useNavigate } from "react-router-dom";
 import {
   sidebarSnapshot,
   toogleSidebar,
   closeSidebar,
-} from "../../snapshots/sidebar.snapshot";
-import HamburgerIcon from "../icons/HamburgerIcon";
-import ChevronDoubleIcon from "../icons/ChevronDoubleIcon";
-import { locationSnapshot } from "../../snapshots/location.snapshot";
-import { useNavigate } from "react-router-dom";
+} from "@snapshots/sidebar.snapshot";
+import HamburgerIcon from "@shared/ui/icons/HamburgerIcon";
+import ChevronDoubleIcon from "@shared/ui/icons/ChevronDoubleIcon";
+import { locationSnapshot } from "@snapshots/location.snapshot";
 
 type SidebarProps = {
   width?: number;

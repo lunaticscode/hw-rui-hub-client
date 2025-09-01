@@ -2,8 +2,8 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import { useSnapshot } from "valtio";
-import { sidebarSnapshot } from "../../snapshots/sidebar.snapshot";
-import useUpdateLocation from "../../hooks/useUpdateLocation";
+import { sidebarSnapshot } from "@snapshots/sidebar.snapshot";
+import useUpdateLocation from "@widgets/app/lib/hooks/useUpdateLocation";
 
 const RootLayout = () => {
   const { sidebarOpen } = useSnapshot(sidebarSnapshot);
