@@ -22,18 +22,20 @@ const mapPathnameToMenus: Record<string, { label: string; href: string }[]> = {
     { label: "Radius", href: "/foundation/radius" },
   ],
   "/component": [
-    { label: "Accordion", href: "/component/accordion" },
-    { label: "Button", href: "/component/button" },
-    { label: "Carousel", href: "/component/carousel" },
-    { label: "Calendar", href: "/component/calendar" },
-    { label: "Popover", href: "/component/popover" },
-    { label: "Select", href: "/component/select" },
-    { label: "Tabs", href: "/component/tabs" },
-    { label: "Toast", href: "/component/toast" },
+    { label: "Overview", href: "/component" },
+
+    // { label: "Accordion", href: "/component/accordion" },
+    // { label: "Button", href: "/component/button" },
+    // { label: "Carousel", href: "/component/carousel" },
+    // { label: "Calendar", href: "/component/calendar" },
+    // { label: "Popover", href: "/component/popover" },
+    // { label: "Select", href: "/component/select" },
+    // { label: "Tabs", href: "/component/tabs" },
+    // { label: "Toast", href: "/component/toast" },
   ],
 };
 
-const visibleSidebarPathnames = ["/foundation", "/components"];
+const visibleSidebarPathnames = ["/foundation", "/component"];
 const getSidebarMenusFromPathname = (pathname: string) => {
   const targetPathname = visibleSidebarPathnames.find((path) =>
     pathname.startsWith(path)

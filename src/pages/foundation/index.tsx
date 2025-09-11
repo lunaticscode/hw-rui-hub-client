@@ -16,7 +16,6 @@ const FoundationPage: React.FC = () => {
         </p>
       </header>
       <section className="foundation-page-content">
-        {/* 여기에 sub-path별 컨텐츠가 렌더링됩니다. */}
         <Outlet />
       </section>
     </div>
