@@ -1,6 +1,7 @@
 @import "./not-found.css";
 @import "./not-ready.css";
 @import "./foundation-overview.css";
+@import "./component-page.css";
 
 /* 페이지 wrapper */
 .page {

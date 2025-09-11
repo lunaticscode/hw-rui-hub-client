@@ -1,8 +1,6 @@
-import useGetComponentOperationStatus from "@entities/component/api/useGetComponentOperationStatus";
+import InstallableControllerContainer from "@widgets/component/ui/InstallableControllerContainer";
 
 const ComponentPage = () => {
-  const { data, isLoading } = useGetComponentOperationStatus();
-
   return (
     <div className="page">
       <header className="page-header">
@@ -18,9 +16,7 @@ const ComponentPage = () => {
         목록을 확인하고, 각 항목의 사용 가능 여부를 토글로 제어할 수 있는 설정
         영역입니다.
       </div>
-      <div className="page-content">
-        {!isLoading ? JSON.stringify(data, null, 2) : null}
-      </div>
+      <InstallableControllerContainer />
       <div className="page-divider" />
     </div>
   );

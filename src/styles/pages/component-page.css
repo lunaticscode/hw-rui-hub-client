@@ -1,0 +1,47 @@
+.component-page-installable-update-button-wrapper {
+  text-align: right;
+}
+.component-page-installable-update-button {
+  width: 150px;
+  height: 30px;
+  font-weight: bold;
+}
+
+.component-page-installable-controllers-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 20px;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.component-page-installable-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.component-page-installable-component-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .component-page-installable-controllers-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .component-page-installable-component-name {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .component-page-installable-controllers-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+  }
+  .component-page-installable-component-name {
+    font-size: 14px;
+  }
+}

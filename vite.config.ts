@@ -4,6 +4,14 @@ import { resolve } from "node:path";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:8085",
+        changeOrigin: true,
+      },
+    },
+  },
   resolve: {
     alias: {
       "@entities": resolve(__dirname, "src/entities"),

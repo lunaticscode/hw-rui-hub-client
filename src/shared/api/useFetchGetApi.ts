@@ -1,7 +1,6 @@
-import { API_BASE_URL } from "@shared/config/api";
 import { useEffect, useState } from "react";
 
-const useFetchGetApi = <T>(path: string, shouldFetch: boolean = true) => {
+const useFetchGetApi = <T>(url: string, shouldFetch: boolean = true) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
   const [data, setData] = useState<T | null>(null);
@@ -9,7 +8,7 @@ const useFetchGetApi = <T>(path: string, shouldFetch: boolean = true) => {
   const trigger = async () => {
     try {
       setIsLoading(true);
-      const request = await fetch(`${API_BASE_URL}${path}`);
+      const request = await fetch(url);
       if (request.ok) {
         const response = await request.json();
         setData(response);
@@ -35,7 +34,7 @@ const useFetchGetApi = <T>(path: string, shouldFetch: boolean = true) => {
 
   return {
     data,
-    trigger,
+    refetch: trigger,
     isLoading,
     error,
   };
