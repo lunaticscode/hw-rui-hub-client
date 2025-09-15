@@ -1,12 +1,14 @@
 import type { ComponentMetadata } from "@entities/component/types";
 import type { FC } from "react";
+// import { useFormContext, useWatch } from "react-hook-form";
 
 interface PromptMetadataEditFormProps {
   metadata: ComponentMetadata;
 }
 const PromptMetadataEditForm: FC<PromptMetadataEditFormProps> = (props) => {
   const { metadata } = props;
-
+  //   const { setValue, control } = useFormContext();
+  //   const {} = useWatch({control, name: metadata.label})
   return (
     <div className="component-page-prompt-metadata-edit_form">
       <div style={{ display: "flex", justifyContent: "space-between" }}>
