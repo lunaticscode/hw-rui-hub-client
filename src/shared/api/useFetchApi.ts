@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useFetchGetApi = <T>(url: string, shouldFetch: boolean = true) => {
+const useFetchApi = <T>(url: string, shouldFetch: boolean = true) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
   const [data, setData] = useState<T | null>(null);
@@ -40,4 +40,4 @@ const useFetchGetApi = <T>(url: string, shouldFetch: boolean = true) => {
   };
 };
 
-export default useFetchGetApi;
+export default useFetchApi;

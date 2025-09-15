@@ -1,4 +1,4 @@
-import useFetchGetApi from "@shared/api/useFetchGetApi";
+import useFetchGetApi from "@shared/api/useFetchApi";
 import { FOUNDATION_API_REGISTRY_PATH } from "../config/const";
 
 const useGetFoundationBaseColor = () => {

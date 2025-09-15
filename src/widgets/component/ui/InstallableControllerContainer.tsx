@@ -42,15 +42,18 @@ const InstallableControllerContainer: FC<
   return (
     <FormProvider {...form}>
       {children}
-      <div className="component-page-installable-update-button-wrapper">
-        <button
-          disabled={buttonDisabled}
-          className="component-page-installable-update-button"
-          onClick={handleClickUpdate}
-        >
-          UPDATE
-        </button>
-      </div>
+      {data ? (
+        <div className="component-page-installable-update-button-wrapper">
+          <button
+            disabled={buttonDisabled}
+            className="component-page-installable-update-button"
+            onClick={handleClickUpdate}
+          >
+            UPDATE
+          </button>
+        </div>
+      ) : null}
+
       <div className="component-page-installable-controllers-wrapper">
         {data
           ? Object.keys(data.installable).map((componentName, index) => (

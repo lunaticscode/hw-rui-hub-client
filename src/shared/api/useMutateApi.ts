@@ -1,7 +1,12 @@
 import { useState } from "react";
 
+type MutateMethods = "POST" | "PUT" | "PATCH";
 const DEFAULT_CONTENT_TYPE = "application/json";
-const useFetchPatchApi = <T, Body>(url: string, isFormData?: boolean) => {
+const useMutateApi = <T, Body>(
+  url: string,
+  method: MutateMethods = "POST",
+  isFormData?: boolean
+) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
 
@@ -14,7 +19,7 @@ const useFetchPatchApi = <T, Body>(url: string, isFormData?: boolean) => {
         : { "Content-Type": DEFAULT_CONTENT_TYPE };
 
       const request = await fetch(url, {
-        method: "PATCH",
+        method,
         headers,
         body: JSON.stringify(data),
       });
@@ -43,4 +48,4 @@ const useFetchPatchApi = <T, Body>(url: string, isFormData?: boolean) => {
     error,
   };
 };
-export default useFetchPatchApi;
+export default useMutateApi;

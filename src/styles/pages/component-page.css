@@ -1,3 +1,4 @@
+/******************** installable-controller ********************/
 .component-page-installable-update-button-wrapper {
   text-align: right;
 }
@@ -5,6 +6,8 @@
   width: 150px;
   height: 30px;
   font-weight: bold;
+  border-radius: 8px;
+  border: none;
 }
 
 .component-page-installable-controllers-wrapper {
@@ -44,4 +47,122 @@
   .component-page-installable-component-name {
     font-size: 14px;
   }
+}
+
+/******************** prompt-metadata-edit_form ********************/
+.component-page-prompt-metadata-edit_forms-wrapper {
+  display: grid;
+  /* padding: 16px; */
+  margin-top: 40px;
+  row-gap: 10px;
+}
+
+/* ====== 메타데이터 최종 제출 버튼 ====== */
+.component-page-prompt-metadata-edit_form-update-button {
+  width: 150px;
+  height: 30px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+}
+
+@media screen and (min-width: 1700px) {
+  .component-page-prompt-metadata-edit_forms-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+  }
+}
+
+/* 개별 폼 카드 */
+.component-page-prompt-metadata-edit_form {
+  background: #2a2a2a;
+  min-width: 550px;
+  border: 1px solid rgba(25, 24, 24, 0.06);
+  border-radius: 8px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* 라벨 */
+.component-page-prompt-metadata-edit_form-label {
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  color: #9aa3b2; /* toggle 텍스트 계열 */
+  user-select: none;
+  margin-top: 16px;
+}
+
+/* ====== 폼 섹션 타이틀 ====== */
+.component-page-prompt-metadata-edit_form-title {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #e7ebf3; /* 어두운 배경 대비되는 밝은 톤 */
+  margin-bottom: 12px;
+  user-select: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+/* ====== 칩/입력 추가 버튼 ====== */
+.component-page-prompt-metadata-edit_form-input-add-button {
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e7ebf3;
+  background: #1a2030;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 160ms ease, box-shadow 160ms ease, transform 80ms ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.component-page-prompt-metadata-edit_form-input-add-button:hover {
+  background: #232a3b;
+}
+
+.component-page-prompt-metadata-edit_form-input-add-button:active {
+  transform: translateY(1px);
+}
+/* 입력 공통 */
+.component-page-prompt-metadata-edit_form-input {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 8px 12px;
+  background: #131417; /* toggle-track보다 살짝 밝게 */
+  color: #e7ebf3;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  outline: none;
+  font-size: 14px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.component-page-prompt-metadata-edit_form-input.inline {
+  width: min-content;
+}
+
+/* placeholder */
+.component-page-prompt-metadata-edit_form-input::placeholder {
+  color: #738099;
+}
+
+/* 포커스(토글의 focus-visible 톤 매칭) */
+.component-page-prompt-metadata-edit_form-input:focus,
+.component-page-prompt-metadata-edit_form-input:focus-visible {
+  border-color: rgba(30, 255, 180, 0.35);
+  box-shadow: 0 0 0 4px rgba(30, 255, 180, 0.18);
+}
+
+/* 비활성화 */
+.component-page-prompt-metadata-edit_form-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }

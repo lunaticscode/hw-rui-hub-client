@@ -1,4 +1,5 @@
 import InstallableControllerContainer from "@widgets/component/ui/InstallableControllerContainer";
+import PromptArgsControllerContainer from "@widgets/component/ui/PromptArgsControllerContainer";
 
 const ComponentPage = () => {
   return (
@@ -18,6 +19,17 @@ const ComponentPage = () => {
       </div>
       <InstallableControllerContainer />
       <div className="page-divider" />
+      <section id="prompt" className="page-subtitle linkable">
+        Promopt Metadata
+      </section>
+      <div className="page-description">
+        프롬프트 추천 정확도를 높이기 위해 각 컴포넌트의{" "}
+        <span className="page-emphasized-keyword">Intent</span>,
+        <span className="page-emphasized-keyword">Semantic Role</span>,
+        <span className="page-emphasized-keyword">Layout Hint</span>값을
+        설정합니다.
+      </div>
+      <PromptArgsControllerContainer />
     </div>
   );
 };
