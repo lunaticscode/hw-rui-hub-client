@@ -14,6 +14,10 @@ const PromptArgsControllerContainer = () => {
     console.log({ componentName });
   };
 
+  const handleClickComponentReset = (componentName: string) => {
+    formValues.resetField(componentName);
+  };
+
   useEffect(() => {
     if (data) {
       formValues.reset(data.metadata);
@@ -29,6 +33,7 @@ const PromptArgsControllerContainer = () => {
               key={`prompt-metadata-editform-key-${index}`}
               metadata={data.metadata[componentId]}
               onClickComponentUpdate={handleClickComponentUpdate}
+              onClickComponentReset={handleClickComponentReset}
             />
           ))}
         </FormProvider>

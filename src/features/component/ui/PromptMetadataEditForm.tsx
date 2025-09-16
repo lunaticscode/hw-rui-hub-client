@@ -5,9 +5,10 @@ import { useFormContext } from "react-hook-form";
 interface PromptMetadataEditFormProps {
   metadata: ComponentMetadata;
   onClickComponentUpdate: (component: string) => void;
+  onClickComponentReset: (component: string) => void;
 }
 const PromptMetadataEditForm: FC<PromptMetadataEditFormProps> = (props) => {
-  const { metadata, onClickComponentUpdate } = props;
+  const { metadata, onClickComponentUpdate, onClickComponentReset } = props;
   const { register, formState } = useFormContext();
 
   const isDirtyForm =
@@ -16,6 +17,9 @@ const PromptMetadataEditForm: FC<PromptMetadataEditFormProps> = (props) => {
   const handleClickUpdate = () => {
     onClickComponentUpdate(metadata.label.toLowerCase());
   };
+  const handleClickReset = () => {
+    onClickComponentReset(metadata.label.toLowerCase());
+  };
 
   return (
     <div className="component-page-prompt-metadata-edit_form">
@@ -23,10 +27,17 @@ const PromptMetadataEditForm: FC<PromptMetadataEditFormProps> = (props) => {
         <div className={"component-page-prompt-metadata-edit_form-title"}>
           {metadata.label}
         </div>
-        <div>
+        <div className="component-page-prompt-metadata-edit_form-buttons-wrapper">
           <button
             disabled={!isDirtyForm}
-            className="component-page-prompt-metadata-edit_form-update-button"
+            className="component-page-prompt-metadata-edit_form-action-button reset"
+            onClick={handleClickReset}
+          >
+            RESET
+          </button>
+          <button
+            disabled={!isDirtyForm}
+            className="component-page-prompt-metadata-edit_form-action-button update"
             onClick={handleClickUpdate}
           >
             UPDATE
