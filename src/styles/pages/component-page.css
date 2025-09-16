@@ -131,9 +131,30 @@
 .component-page-prompt-metadata-edit_form-input-add-button:active {
   transform: translateY(1px);
 }
+
+.component-page-prompt-metadata-edit_form-inputs-wrapper {
+  display: inline-flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  column-gap: 8px;
+  row-gap: 8px;
+  margin-top: 5px;
+  width: 100%;
+  padding: 5px 0px;
+}
+
+.component-page-prompt-metadata-edit_form-inputs-wrapper::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.component-page-prompt-metadata-edit_form-inputs-wrapper::-webkit-scrollbar-thumb {
+  background-color: #321f86; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the thumb */
+}
+
 /* 입력 공통 */
 .component-page-prompt-metadata-edit_form-input {
-  display: inline-flex;
+  /* display: inline-flex; */
   align-items: center;
   min-height: 24px;
   padding: 8px 12px;
@@ -149,17 +170,21 @@
   width: min-content;
 }
 
+.component-page-prompt-metadata-edit_form-input[data-isdirty="true"] {
+  box-shadow: 0px 0px 10px rgb(15, 208, 105);
+}
+
 /* placeholder */
 .component-page-prompt-metadata-edit_form-input::placeholder {
   color: #738099;
 }
 
 /* 포커스(토글의 focus-visible 톤 매칭) */
-.component-page-prompt-metadata-edit_form-input:focus,
+/* .component-page-prompt-metadata-edit_form-input:focus,
 .component-page-prompt-metadata-edit_form-input:focus-visible {
   border-color: rgba(30, 255, 180, 0.35);
   box-shadow: 0 0 0 4px rgba(30, 255, 180, 0.18);
-}
+} */
 
 /* 비활성화 */
 .component-page-prompt-metadata-edit_form-input:disabled {
